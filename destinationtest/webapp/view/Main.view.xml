@@ -1,0 +1,23 @@
+<mvc:View
+    controllerName="testdestination.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <List
+            headerText="Products"
+            headerLevel="H2"
+            items="{
+			path: 'oNorthWindModel>/Products'
+		}"
+        >
+            <StandardListItem
+                title="{oNorthWindModel>ProductName}"
+                counter="{oNorthWindModel>ProductID}"
+            />
+        </List>
+    </Page>
+</mvc:View>
